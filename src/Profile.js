@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import WithRouterSample from './WithRouterSample';
 
 const data = {
     sbshin: {
@@ -23,8 +25,10 @@ const Profile = ({ match }) => {
                 {username}({Profile.name})
             </h3>
             <p>{Profile.description}</p>
+            <WithRouterSample />
         </div>
+
     )
 };
 
-export default Profile;
+export default withRouter(Profile);
