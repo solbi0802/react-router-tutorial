@@ -1,8 +1,8 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import About from './About';
 import Home from './Home';
-import Profile from './Profile';
+import Profiles from './Profiles';
 
 
 const App = () => {
@@ -16,18 +16,13 @@ const App = () => {
           <Link to="/about">소개</Link>
         </li>
         <li>
-          <Link to="/profile/sbshin">sbshin 프로필</Link>
-        </li>
-        <li>
-          <Link to="/profile/gildong">gildong 프로필</Link>
+          <Link to="/profiles">프로필</Link>
         </li>
       </ul>
       <hr />
-      <Routes>
-        <Route path="/" component={Home} exact={true} />
-        <Route path={['/about', '/info']} component={About} />
-        <Route path="/profile/:username" component={Profile} />
-      </Routes>
+      <Route path="/" component={Home} exact={true} />
+      <Route path={['/about', '/info']} component={About} />
+      <Route path="/profiles" component={Profiles} />
     </div>
   );
 }
